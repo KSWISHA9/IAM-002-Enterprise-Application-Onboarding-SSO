@@ -2,19 +2,21 @@
 
 ## Overview
 
-This repository documents enterprise application onboarding into Microsoft Entra ID using SAML, OpenID Connect, OAuth 2.0, and SCIM provisioning concepts.
+This repository documents enterprise application onboarding into Microsoft Entra ID using SAML 2.0, OpenID Connect, and SCIM provisioning.
 
-## Application Packages
+## Enterprise Application Onboarding Catalog
 
-| App | Protocol | Guide |
-|---|---|---|
-| Grafana | SAML | [Setup Guide](apps/Grafana/README.md) |
-| WordPress | OIDC | [Setup Guide](apps/WordPress/README.md) |
-| ServiceNow | SAML | [Setup Guide](apps/ServiceNow/README.md) |
-| Salesforce | SAML | [Setup Guide](apps/Salesforce/README.md) |
-| GitHub Enterprise | SAML | [Setup Guide](apps/GitHub-Enterprise/README.md) |
-| Custom OIDC App | OIDC | [Setup Guide](apps/Custom-OIDC-App/README.md) |
-| SCIM Provisioning | SCIM | [Setup Guide](apps/SCIM-Provisioning/README.md) |
+| Application | Protocol | Status | Guide |
+|---|---|:---:|---|
+| Grafana | SAML 2.0 | ✅ | [Setup Guide](apps/Grafana/README.md) |
+| WordPress | OIDC | ✅ | [Setup Guide](apps/WordPress/README.md) |
+| GitHub Enterprise Cloud | SAML 2.0 | ✅ | [Setup Guide](apps/GitHub-Enterprise/README.md) |
+| Salesforce | SAML 2.0 | ✅ | [Setup Guide](apps/Salesforce/README.md) |
+| Atlassian Jira Cloud | SAML 2.0 | ✅ | [Setup Guide](apps/Jira/README.md) |
+| ServiceNow | SAML 2.0 | 🚧 In Progress | [Setup Guide](apps/ServiceNow/README.md) |
+| Slack | SAML 2.0 | ⏳ Planned | [Setup Guide](apps/Slack/README.md) |
+| Zoom | SAML 2.0 | ⏳ Planned | [Setup Guide](apps/Zoom/README.md) |
+| SCIM Provisioning | SCIM 2.0 | ⏳ Planned | [Setup Guide](apps/SCIM-Provisioning/README.md) |
 
 ## Skills Demonstrated
 
