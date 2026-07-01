@@ -19,8 +19,7 @@ The goal of this project is to demonstrate a repeatable IAM application onboardi
 | Atlassian Jira Cloud | SAML 2.0 | ✅ | [Setup Guide](apps/Jira/README.md) |
 | Cisco Duo | OAuth 2.0 / Admin Consent | ✅ | [Setup Guide](apps/Cisco-Duo/README.md) |
 | ServiceNow | SAML 2.0 | 🚧 In Progress | [Setup Guide](apps/ServiceNow/README.md) |
-| Slack | SAML 2.0 | ⏳ Planned | [Setup Guide](apps/Slack/README.md) |
-| Zoom | SAML 2.0 | ⏳ Planned | [Setup Guide](apps/Zoom/README.md) |
+| Keycloak | OIDC / SAML | ⏳ Planned | [Setup Guide](apps/Keycloak/README.md) |
 | SCIM Provisioning | SCIM 2.0 | ⏳ Planned | [Setup Guide](apps/SCIM-Provisioning/README.md) |
 
 ---
