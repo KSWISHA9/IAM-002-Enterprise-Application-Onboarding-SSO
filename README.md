@@ -8,42 +8,40 @@ This project documents an enterprise application onboarding program using Micros
 
 It covers SAML, OIDC, OAuth, Enterprise Applications, App Registrations, SCIM provisioning, JIT provisioning, claims mapping, group assignment, RBAC, testing, troubleshooting, and operational handoff.
 
-## Business Scenario
+## Current Progress
 
-OmniVerse Enterprise has completed its hybrid identity migration and now needs to onboard business applications into Microsoft Entra ID for centralized authentication and access management.
+| Application | Status | Protocol |
+|---|---|---|
+| OmniVerse Grafana | Configured | SAML 2.0 |
+| WordPress | Planned | OIDC |
+| GitHub | Planned | SAML/OIDC |
+| Zoom | Planned | SAML |
+| AWS | Planned | SAML |
+| Workday | Planned | SAML |
+| Box | Planned | SAML |
+| Cisco Secure | Planned | SAML |
 
-The IAM team is responsible for evaluating application requirements, selecting the correct authentication protocol, configuring SSO, assigning users and groups, validating access, documenting support procedures, and preparing the application for production use.
+## Completed Work
 
-## Project Scope
+- Enterprise onboarding repository created
+- Application onboarding runbook created
+- Grafana business request documented
+- Grafana SAML configuration completed
+- Grafana claims mapping documented
+- Grafana troubleshooting documented
 
-- Application intake
-- SAML SSO
-- OIDC / OAuth
-- Enterprise Applications
-- App Registrations
-- SCIM provisioning
-- JIT provisioning
-- Claims mapping
-- Attribute mapping
-- Group-based assignment
-- RBAC
-- Certificate lifecycle
-- Metadata exchange
-- Testing and troubleshooting
-- Operational handoff
+## Repository Structure
 
-## Applications
-
-| Application | Protocol | Provisioning | Purpose |
-|---|---|---|---|
-| Grafana | SAML/OIDC | Manual | Infrastructure dashboards |
-| WordPress | OIDC | Manual | Business web portal |
-| GitHub | SAML/OIDC | Manual | Developer platform |
-| ServiceNow | SAML | SCIM | ITSM / IAM operations |
-| Slack | SAML/OIDC | SCIM | Collaboration |
-| Jira | SAML | SCIM | Project management |
-| Zoom | SAML | SCIM | Communications |
-| Salesforce | SAML | SCIM | CRM |
+```text
+enterprise-application-onboarding-sso/
+├── app-onboarding/
+├── apps/
+│   └── Grafana/
+├── diagrams/
+├── docs/
+├── screenshots/
+└── scripts/
+```
 
 ## Created By
 
