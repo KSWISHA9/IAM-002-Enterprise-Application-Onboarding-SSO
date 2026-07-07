@@ -164,7 +164,6 @@ ss README.md
 
 ## Future Enhancements
 
-- ServiceNow SAML onboarding
 - Group-based RBAC mapping for all applications
 - Conditional Access integration per application sensitivity
 - Lifecycle Workflows for automated provisioning
