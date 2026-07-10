@@ -20,7 +20,9 @@ Enterprise application onboarding using Microsoft Entra ID across SAML 2.0, Open
 - Business Request
 - Architecture
 - Application Catalog
-- Walkthrough
+- Evidence Links
+- Evidence Gallery
+- What This Proves
 - Skills Demonstrated
 - Technologies
 - Repository Structure
@@ -71,7 +73,19 @@ flowchart LR
 
 ---
 
-## Walkthrough
+## Evidence Links
+
+- [View all screenshots](screenshots/)
+- [Review application setup guides](apps/)
+- [Review Grafana SAML guide](apps/Grafana/README.md)
+- [Review Keycloak federation guide](apps/Keycloak/README.md)
+- [Review SCIM provisioning guide](apps/SCIM-Provisioning/README.md)
+
+---
+
+## Evidence Gallery
+
+The screenshots below show the SSO, federation, token validation, and provisioning evidence. The complete evidence set is available in the [screenshots folder](screenshots/).
 
 ![Grafana SAML](screenshots/07-Entra-Basic-SAML-Configuration.png.png)
 
@@ -106,6 +120,16 @@ Keycloak Identity Provider Brokering - Microsoft Entra ID federated as an upstre
 ![SCIM Provisioning](screenshots/07-scim-attribute-mapping.png.png)
 
 SCIM 2.0 automated provisioning from Microsoft Entra ID to Atlassian Cloud - attribute mapping including the required emails type eq work value format validated and confirmed.
+
+---
+
+## What This Proves
+
+- Onboarded enterprise applications across SAML 2.0, OpenID Connect, OAuth 2.0, SCIM, and identity brokering patterns.
+- Configured Microsoft Entra ID enterprise applications with claims, reply URLs, certificates, and metadata exchange.
+- Validated end-to-end SSO for Grafana, GitHub Enterprise, Salesforce, Jira, WordPress, Cisco Duo, Keycloak, and SCIM provisioning.
+- Documented repeatable setup guides for each application and protocol.
+- Demonstrated troubleshooting knowledge around Entity IDs, Reply URLs, token validation, and schema-compliant SCIM mappings.
 
 ---
 
@@ -145,17 +169,17 @@ SCIM 2.0 automated provisioning from Microsoft Entra ID to Atlassian Cloud - att
 
 ```text
 IAM-002-Enterprise-Application-Onboarding-SSO/
-ss apps/
-ss     Grafana/
-ss     WordPress/
-ss     GitHub-Enterprise/
-ss     Salesforce/
-ss     Jira/
-ss     Cisco-Duo/
-ss     Keycloak/
-ss     SCIM-Provisioning/
-ss screenshots/
-ss README.md
+|-- apps/
+|   |-- Grafana/
+|   |-- WordPress/
+|   |-- GitHub-Enterprise/
+|   |-- Salesforce/
+|   |-- Jira/
+|   |-- Cisco-Duo/
+|   |-- Keycloak/
+|   `-- SCIM-Provisioning/
+|-- screenshots/
+`-- README.md
 ```
 
 ---
@@ -174,6 +198,7 @@ ss README.md
 - Group-based RBAC mapping for all applications
 - Conditional Access integration per application sensitivity
 - Lifecycle Workflows for automated provisioning
+
 ---
 
 ## Related Projects
@@ -182,7 +207,6 @@ ss README.md
 |---|---|
 | [INFRA-001 Enterprise Active Directory](https://github.com/KSWISHA9/INFRA-001-Enterprise-Active-Directory-Infrastructure) | DNS, DHCP, OUs, GPOs, 2,000 users |
 | [IAM-001 Hybrid Identity Engineering](https://github.com/KSWISHA9/IAM-001-Hybrid-Identity-Engineering) | Entra Connect, sync, hard/soft match |
-| [IAM-002 Enterprise Application Onboarding](https://github.com/KSWISHA9/IAM-002-Enterprise-Application-Onboarding-SSO) | SAML, OIDC, OAuth, SCIM, Keycloak |
 | [IAM-003 Identity Lifecycle Automation](https://github.com/KSWISHA9/IAM-003-Identity-Lifecycle-Automation) | Joiner-Mover-Leaver, Graph, RBAC |
 | [IAM-004 Conditional Access and Zero Trust](https://github.com/KSWISHA9/IAM-004-Conditional-Access-Zero-Trust) | MFA, CA policies, named locations |
 | [IAM-005 Identity Governance](https://github.com/KSWISHA9/IAM-005-Identity-Governance) | PIM, Access Reviews, Entitlement Management |
