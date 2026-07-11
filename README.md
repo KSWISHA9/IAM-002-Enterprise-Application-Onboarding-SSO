@@ -60,16 +60,16 @@ flowchart LR
 
 ## Application Catalog
 
-| Application | Protocol | Guide |
-|---|---|---|
-| Grafana | SAML 2.0 | [Setup Guide](apps/Grafana/README.md) |
-| WordPress | OpenID Connect | [Setup Guide](apps/WordPress/README.md) |
-| GitHub Enterprise Cloud | SAML 2.0 | [Setup Guide](apps/GitHub-Enterprise/README.md) |
-| Salesforce | SAML 2.0 | [Setup Guide](apps/Salesforce/README.md) |
-| Atlassian Jira Cloud | SAML 2.0 | [Setup Guide](apps/Jira/README.md) |
-| Cisco Duo | OAuth 2.0 / Admin Consent | [Setup Guide](apps/Cisco-Duo/README.md) |
-| Keycloak | SAML 2.0 Federation | [Setup Guide](apps/Keycloak/README.md) |
-| SCIM Provisioning | SCIM 2.0 | [Setup Guide](apps/SCIM-Provisioning/README.md) |
+| Application | Protocol | Evidence | Guide |
+|---|---|---|---|
+| Grafana | SAML 2.0 | [SAML configuration](screenshots/07-Entra-Basic-SAML-Configuration.png.png) | [Setup Guide](apps/Grafana/README.md) |
+| WordPress | OpenID Connect | [OIDC token validation](screenshots/13-successful-oidc-token-validation.png) | [Setup Guide](apps/WordPress/README.md) |
+| GitHub Enterprise Cloud | SAML 2.0 | [SAML validation](screenshots/08-github-saml-validation-success.png) | [Setup Guide](apps/GitHub-Enterprise/README.md) |
+| Salesforce | SAML 2.0 | [SSO success](screenshots/08-salesforce-sso-success.png) | [Setup Guide](apps/Salesforce/README.md) |
+| Atlassian Jira Cloud | SAML 2.0 | [SSO success](screenshots/09-jira-sso-success.png) | [Setup Guide](apps/Jira/README.md) |
+| Cisco Duo | OAuth 2.0 / Admin Consent | [Microsoft consent](screenshots/04-duo-microsoft-consent.png) | [Setup Guide](apps/Cisco-Duo/README.md) |
+| Keycloak | SAML 2.0 Federation | [Linked identity provider](screenshots/11-Keycloak-Linked-Identity-Provider.png.png) | [Setup Guide](apps/Keycloak/README.md) |
+| SCIM Provisioning | SCIM 2.0 | [Attribute mapping](screenshots/07-scim-attribute-mapping.png.png) | [Setup Guide](apps/SCIM-Provisioning/README.md) |
 
 ---
 
@@ -77,6 +77,14 @@ flowchart LR
 
 - [View all screenshots](screenshots/)
 - [Review application setup guides](apps/)
+- [Review onboarding documentation](app-onboarding/)
+- [Review automation scripts](scripts/)
+- [Review enterprise onboarding runbook](docs/Enterprise-Application-Onboarding-Runbook.md)
+- [Review application catalog](app-onboarding/Application-Catalog.md)
+- [Review certificate lifecycle plan](app-onboarding/Certificate-Lifecycle.md)
+- [Review claims mapping standards](app-onboarding/Claims-Mapping.md)
+- [Review RBAC matrix](app-onboarding/RBAC-Matrix.md)
+- [Review SCIM configuration notes](app-onboarding/SCIM-Configuration.md)
 - [Review Grafana SAML guide](apps/Grafana/README.md)
 - [Review Keycloak federation guide](apps/Keycloak/README.md)
 - [Review SCIM provisioning guide](apps/SCIM-Provisioning/README.md)
@@ -108,6 +116,18 @@ GitHub Enterprise Cloud SAML validation - Entra ID authenticated the user and Gi
 ![Salesforce SSO](screenshots/08-salesforce-sso-success.png)
 
 Salesforce SAML SSO completed - IdP-initiated flow from Microsoft Entra ID authenticated directly into the Salesforce dashboard without local credentials.
+
+---
+
+![Atlassian Jira SSO](screenshots/09-jira-sso-success.png)
+
+Atlassian Jira SAML SSO completed - Microsoft Entra ID authenticated the assigned user and redirected into Jira without a separate local sign-in.
+
+---
+
+![Cisco Duo Admin Consent](screenshots/04-duo-microsoft-consent.png)
+
+Cisco Duo OAuth integration completed - Microsoft consent granted so Duo could integrate with the Entra tenant for identity security workflows.
 
 ---
 
@@ -169,6 +189,13 @@ SCIM 2.0 automated provisioning from Microsoft Entra ID to Atlassian Cloud - att
 
 ```text
 IAM-002-Enterprise-Application-Onboarding-SSO/
+|-- app-onboarding/
+|   |-- Application-Catalog.md
+|   |-- Certificate-Lifecycle.md
+|   |-- Claims-Mapping.md
+|   |-- Intake-Form.md
+|   |-- RBAC-Matrix.md
+|   `-- SCIM-Configuration.md
 |-- apps/
 |   |-- Grafana/
 |   |-- WordPress/
@@ -178,7 +205,20 @@ IAM-002-Enterprise-Application-Onboarding-SSO/
 |   |-- Cisco-Duo/
 |   |-- Keycloak/
 |   `-- SCIM-Provisioning/
+|-- docs/
+|   `-- Enterprise-Application-Onboarding-Runbook.md
+|-- scripts/
+|   |-- 01-App-Inventory.ps1
+|   |-- 02-Enterprise-App-Export.ps1
+|   |-- 03-App-Assignment-Report.ps1
+|   |-- 04-SAML-Claims-Validator.ps1
+|   |-- 05-SCIM-Provisioning-Report.ps1
+|   |-- 06-Application-Health-Check.ps1
+|   |-- 07-SSO-Validation.ps1
+|   `-- 08-Application-Onboarding-Checklist.ps1
 |-- screenshots/
+|-- screenshots.md
+|-- Build-SSO-Readmes.ps1
 `-- README.md
 ```
 
